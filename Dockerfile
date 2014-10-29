@@ -6,7 +6,7 @@ RUN yum install -y mysql && gem install sinatra activerecord mysql2 --no-ri --no
 # FIXME: This should be the DATABASE_SERVICE_HOST environment variable,
 # but the container doesn't know how to resolve the hostname now.
 # It represents the database host, in case the app should connect to one.
-ENV DATABASE_SERVICE_IP_ADDR 172.17.42.1
+ENV DATABASE_SERVICE_IP_ADDR 172.17.17.3
 
 USER ruby
 ADD app.rb /tmp/app.rb
